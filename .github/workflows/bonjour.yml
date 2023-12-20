@@ -24,5 +24,6 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
-      - run: node esgi-ci-cd/index.js
+      - run: npm install
+      - run: npm run start
       - run: curl --verbose http://127.0.0.1:3000
